@@ -59,6 +59,12 @@ class App(Tk):
         self.labelKet1.config(text= "Hasil Enkripsi :")
 
     def encrypt(self):
+        error1 = self.enkripsix.get()
+        error2 = self.loncatanx.get()
+        if error1 == "":
+            print(messagebox.showerror("Error","Hei Masukin Dulu Lahh Akhii !"))
+        elif error2 == "0":
+            print(messagebox.showerror("Error","Hei Loncatanya Akhii !"))
         result = ""
         for i in range(len(self.enkripsix.get())):
             char=self.enkripsix.get()[i]
